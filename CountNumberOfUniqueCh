@@ -1,0 +1,19 @@
+public static int countDistinct(String s) {
+        s = s.toLowerCase();
+        int n = s.length();
+        int[] a = new int[26];
+ 
+        for (int i = 0; i < n; i++) {
+            int index = s.charAt(i) - 'a'; 
+            a[index] = 1; // Set the value at index to 1
+        }
+ 
+        int count = 0;
+        for (int i = 0; i < 26; i++) { 
+           
+            if (a[i] == 1) {
+                count += 1;
+            }
+        }
+        return count;
+    }
